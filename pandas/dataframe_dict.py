@@ -7,6 +7,7 @@ dictionary = {
     "age" : 12,
     "city": "thane"
 }
+a = 12
 
 data = pd.DataFrame(dictionary, index=['1'])
 
