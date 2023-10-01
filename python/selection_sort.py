@@ -1,16 +1,18 @@
-def selectionSort(array):
-	size = len(array)
-	for ind in range(size):
-		min_index = ind
+array = [12,45,87,1,46,77]
 
-		for j in range(ind + 1, len(array)):
-			# select the minimum element in every iteration
-			if array[j] < array[min_index]:
-				min_index = j
-				
-		(array[ind], array[min_index]) = (array[min_index], array[ind])
+def selection_sort(arr):
+    new_arr =[]
+    for i in range(0, len(arr)):
+        for j in range(1, len(arr)):
+            if arr[i] > arr[j]:
+                temp = arr[i] 
+                arr[i] = arr[j]   
+                arr[j] = temp
 
-arr = [12,4,56,7,88,888]
-selectionSort(arr)
-print('The array after sorting in Ascending Order by selection sort is:')
-print(arr)
+    return arr    
+        
+        
+
+
+p = selection_sort(array)
+print(p)
